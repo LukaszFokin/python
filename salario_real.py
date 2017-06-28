@@ -1,4 +1,9 @@
 salario	= int(input('Salario: '))
-imposto	= float(input('Imposto: '))
+imposto	= input('Imposto: ')
+
+if not imposto:
+	imposto = 27.5
+else:
+	imposto = float(imposto)
 
 print("Valor real: {0}".format(salario - (salario * (imposto *	0.01))))
